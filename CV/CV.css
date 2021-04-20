@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+body {
+    background-color: #CEEBC9;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+h1 ,h2{
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
+
+.part-header {
+    width: 90%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.sidebar {
+    height: 50%;
+	margin-top: 200px;
+    width: 10%;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    float: left;
+    background-color: #3B584F;
+    overflow-x: hidden;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #3B584F;
+}
+
+.sidebar:hover{
+    opacity: 1;
+}
+
+.part-profile {
+    width: 90%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.part-experience {
+    width: 90%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.part-ability {
+    width: 90%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.part-contact {
+    width: 90%;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 1000px) {
+    /* For mobile phones:
+	[class*="part-"]{
+		width: 100%;
+		padding: 20px;
+		float: left;
+		border: 1px solid black;
+	}*/
+
+    body {
+        background-color: #E2E9D8;
+    }
+}
