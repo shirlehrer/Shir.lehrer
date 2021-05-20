@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  font-family: 'Farro', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.parallax {
+  background-image: url('../img/sunset.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box{
+  background-color: rgba(255, 255, 255,0.2);
+  font-size: 30px;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+.text{
+  margin-left: 15%;
+}
+
+
+

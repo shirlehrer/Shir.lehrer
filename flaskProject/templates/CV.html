@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shir lehrer-CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/CV.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='../static/js/CV.js') }}"></script>
+    <style>
+        body {
+            font-family: "Kiwi Maru", sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#profile">PROFILE</a>
+        <br><br>
+        <a href="#abilities">ABILITIES</a>
+        <br><br>
+        <a href="#experience">EXPERIENCE</a>
+        <br><br>
+        <a href="#contact">CONTACT</a>
+        <br><br>
+        <a href="#top">UP</a>
+          <br><br>
+        <button class="cont-button" onclick="document.location='../templates/contact%20list.html'">Contact list</button>
+    </div>
+</div>
+
+<div id="main">
+
+    <div class="row">
+        <div class="part-header part-header-pic">
+            <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+            <br><br>
+            <h1 class="h1-top" style="color: white">Shir Lehrer - Interactive resume</h1>
+            <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="part-profile" id="profile">
+            <h1>My Profile</h1><br><br>
+
+            <a class="details small-details">
+                <h4>Name:</h4>Shir lehrer<br>
+                <h4>Age:</h4>27<br>
+                <h4>Location:</h4>Beer Sheva, Israel
+            </a>
+            <img class="my-pic" src="{{ url_for('static', filename='../static/img/shir.jpg') }}" alt="Me">
+            <a class="about small-about">
+                Born & raised in Israel (and a little bit over the world),<br>
+                I'm genuinely inspired by industrial minimalism and creating new things.<br>
+                Today I'm a 3rd year Industrial and management student at BGU university.<br>
+                I'm eager to learn new things and open to new worlds that I haven't been familiar with.
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="part-ability" id="abilities">
+            <h1>Abilities</h1>
+            <a>“Life without knowledge is death in disguise.”<br>
+                - Talib Kweli
+            </a><br><br>
+            <a class="skills">
+                <h3 style="color: grey">Skills</h3>
+                <h5>CSS</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-1">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>HTML</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-2">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>Microsoft Office</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-3">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>Java</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-4">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>MySQL</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-5">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>Rstudio</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-6">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+            </a>
+
+            <a class="languages">
+                <h3 style="color: grey">Languages</h3>
+                <h5>Hebrew</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-7">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+
+                <h5>English</h5>
+                <div class="light-grey round-xlarge small">
+                    <div class="container center round-xlarge teal teal-8">
+                        <div class="center text-white"></div>
+                    </div>
+                </div>
+                <br>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="part-experience" id="experience">
+        <h1>Experience</h1>
+        <a> “You can do anything you set your mind to.”<br>
+            - Benjamin Franklin</a><br><br>
+        <a>
+            <h4 class="headlines-exp">Human Resources Officer</h4>
+            <p>12/2011-07/2014<br>IDF NAVY</p>
+
+            <h4 class="headlines-exp">Budget Officer</h4>
+            <p>07/2014/08/2015<br>IDF NAVY</p>
+
+            <h4 class="headlines-exp">Security attendant</h4>
+            <p>04/2017-09/2017<br>EL-Al airlines</p>
+
+            <h4 class="headlines-exp">Industrial and Management Engineering Student</h4>
+            <p>10/2018-Today<br>BGU University</p>
+        </a>
+    </div>
+
+    <div class="part-contact" id="contact">
+        <h1>Contact</h1>
+        <div class="fcf-body">
+            <div id="fcf-form">
+                <form id="fcf-form-id" class="fcf-form-class" method="post">
+                    <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label">Your name*</label>
+                        <div class="fcf-input-group">
+                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Your email address*</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label">Type your email here!</label>
+                        <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
+                                  required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="fcf-form-group">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">
+                            Send
+                            message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <br><br><br>
+    <footer class="part-footer">
+        <a class="fa" href="https://www.instagram.com/shirlehrer/" target="_blank">
+            <img src="{{ url_for('static', filename='../static/img/instagram-icon.png') }}" alt="inst" height="40px" width="40px"/>
+        </a>
+        <a class="fa" href="https://www.facebook.com/shir%lehrer/" target="_blank">
+            <img src="{{ url_for('static', filename='../static/img/facebook-icon.png') }}" alt="facebook" height="40px" width="40px"/>
+        </a>
+        <a class="fa" href="https://www.linkedin.com/in/shir-lehrer-38a018207/" target="_blank">
+            <img src="{{ url_for('static', filename='../static/img/linkedin-icon.png') }}" alt="linkedin" height="40px" width="40px"/>
+        </a>
+        <a class="fa" href="https://github.com/shirlehrer" target="_blank">
+            <img src="{{ url_for('static', filename='../static/img/github-icon.png') }}" alt="github" height="40px" width="40px"/>
+        </a>
+        <a class="fa" href="Shir's%20Resume.pdf" download="Shir's%20Resume.pdf">
+            <img src="{{ url_for('static', filename='../static/img/download+file+page+paper+icon-1320165844661536600_512.png') }}" alt="download icon" height="40px"
+                 width="40px">
+        </a>
+    </footer>
+</div>
+</body>
+</html>

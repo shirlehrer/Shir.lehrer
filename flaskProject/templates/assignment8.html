@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/assignment8.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment8</title>
+</head>
+<body>
+{% include('head8.html') %}
+{% if day %}
+    <h3 class="text">It's {{ day }} today :)</h3>
+{% else %}
+    <h3>What day is it Today??</h3>
+{% endif %}
+<div class="parallax"></div>
+
+{% block favorite %}
+<h2 style="margin-left: 8%">A few of my favorite songs are....</h2>
+<ul style="margin-left: 8%">
+    {% for song in songs %}
+    <li> {{ song }} </li>
+    {% endfor %}
+</ul>
+<iframe style="margin-left: 32%" width="560" height="315" src="https://www.youtube.com/embed/hIlu5rNfulE" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+        picture-in-picture" allowfullscreen></iframe>
+<div class="parallax"></div>
+{% endblock %}
+</body>
+</html>
