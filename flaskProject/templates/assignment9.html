@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibale" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/assignment9.css') }}">
+    <title>assignment9</title>
+</head>
+<body>
+{% include ('greetings.html') %}
+<h1 style="color: teal">Search</h1>
+<form name="search" method="get" action="/assignment9">
+    <input type="text" name="username" placeholder="enter user name">
+    <input type="submit" value="Search">
+</form>
+{% if didsearch == True %}
+    {% if found==True %}
+        <ul>
+            <li>
+                <span>Username: {{ username }}</span>
+            </li>
+            <li>
+                <span>Full name: {{ users["first_name"] }} {{ users["last_name"] }}</span>
+            </li>
+            <li>
+                <span>Email Address: {{ users["email"] }}</span>
+            </li>
+        </ul>
+    {% elif found==False %}
+        <div>NO USERS FOUND</div>
+    {% else %}
+        {% for user in users %}
+            <ul>
+                <li>
+                    <span>Username: {{ user }}</span>
+                </li>
+                <li>
+                    <span>Full name: {{ users[user]["first_name"] }} {{ users[user]["last_name"] }}</span>
+                </li>
+                <li>
+                    <span>Email Address: {{ users[user]["email"] }}</span>
+                </li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+{% endif %}
+<br><hr>
+
+{% if session['logged_in']==True %}
+    <h2> Logged-in: {{ session['username'] }}</h2>
+    <h1>Want to log out?</h1>
+    <form name="logout" method="post" action="/logout">
+        <input type="submit" value="Log out" placeholder="LOG OUT">
+    </form>
+{% else %}
+    <h1 style="color: teal">Registration</h1>
+    <h3>Hello stranger!</h3>
+    <form name="registration" method="post" action="/assignment9">
+        <input type="text" name="username" placeholder="enter user name"><br>
+        <input type="email" name="email" placeholder="enter your email address"><br>
+        <input type="text" name="first_name" placeholder="enter first name"><br>
+        <input type="text" name="last_name" placeholder="enter last name"><br><br>
+        <input type="submit" value="Register">
+    </form>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,7 @@
+<header>
+    {% if session['logged_in']==True %}
+        <h4> Logged-in: {{ session['username'] }}</h4>
+    {% else %}
+        <h4> Logged-in: Stranger!</h4>
+    {% endif %}
+</header>

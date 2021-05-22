@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+body {
+    background-color: white;
+    font-family: "Kiwi Maru", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
