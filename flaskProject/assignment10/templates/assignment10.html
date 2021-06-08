@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='../../static/css/assignment10.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <title>assignment10</title>
+</head>
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color: #9C1A1C">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<h2>Insertion Form:</h2>
+<form name="insert" method="POST" action="/insert">
+    <input type="text" name="username" placeholder="enter user name"><br>
+    <input type="email" name="email" placeholder="enter your email address"><br>
+    <input type="text" name="first_name" placeholder="enter first name"><br>
+    <input type="text" name="last_name" placeholder="enter last name"><br><br>
+    <input type="submit" value="insert">
+</form>
+<hr>
+
+<h2>Update users:</h2>
+<form name="update" method="post" action="/update">
+    <input type="text" name="username" placeholder="enter user name"><br>
+    <input type="email" name="email" placeholder="enter your email address"><br>
+    <input type="text" name="first_name" placeholder="enter first name"><br>
+    <input type="text" name="last_name" placeholder="enter last name"><br><br>
+    <input type="submit" value="update">
+</form>
+{% if empty %}
+    <p>Please fill all fields</p>
+{% endif %}
+<hr>
+
+<h2>Delete users:</h2>
+<h4>Fill username that you want to delete</h4>
+<form name="delete" method="post" action="/delete">
+    <input type="text" name="username" placeholder="enter user name"><br><br>
+    <input type="submit" name="delete">
+</form>
+<hr>
+
+<div class="list">
+    <h2>List of users</h2>
+    {% for user in users %}
+        <ul>
+            <li> Username: {{ user.username }}<br>
+                Full name: {{ user.first_name }} {{ user.last_name }}<br>
+                Email address: {{ user.email }}</li>
+        </ul>
+    {% endfor %}
+    <hr>
+</div>
+
+
+</body>
+</html>

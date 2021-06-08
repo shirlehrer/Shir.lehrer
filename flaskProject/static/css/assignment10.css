@@ -1,0 +1,10 @@
+body, html {
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #A5D6D9;
+}
+
+.list {
+    margin-left: 40%;
+}

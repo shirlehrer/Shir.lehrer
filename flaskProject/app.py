@@ -1,4 +1,5 @@
-from flask import Flask, url_for, render_template, request, session, redirect
+from flask import Flask, render_template, url_for, session, request, redirect, Blueprint
+
 
 app = Flask(__name__)
 app.secret_key = '1308'
@@ -72,5 +73,12 @@ def favorite():
 def contactlist():
     return render_template('contact list.html')
 
+
+from flaskProject.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
+
