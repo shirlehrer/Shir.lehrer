@@ -123,7 +123,7 @@ def get_user(SOME_USER_ID=None):
         if len(query_result) != 0:
             return jsonify(query_result)
     return jsonify({'success': False,
-                    'error': 'Request failed'})
+                    'error': 'User does not exist'})
 
 
 if __name__ == '__main__':
